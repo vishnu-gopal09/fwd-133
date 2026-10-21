@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mess Inventory | South Asian University</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <nav class="container nav-inner" aria-label="Main navigation">
+      <a href="index.html" class="brand"><span class="brand-mark"></span>Mess Inventory</a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how-it-works">How it works</a></li>
+        <li><a href="#inventory">Inventory</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#login" class="login">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inventory">
+      <div class="container hero-grid">
+        <div>
+          <h1>Know what is in the mess store before it runs out.</h1>
+          <p>Mess Inventory helps South Asian University track groceries, vegetables and supplies, so every meal is planned with the stock you actually have.</p>
+          <div class="btn-row">
+            <a href="#login" class="btn btn-primary">Open inventory</a>
+            <a href="#how-it-works" class="btn btn-outline">See how it works</a>
+          </div>
+        </div>
+
+        <aside class="panel" aria-label="Sample stock levels">
+          <h2>Today's stock</h2>
+          <div class="stock">
+            <div class="stock-head"><span>Rice</span><span>120 kg</span></div>
+            <div class="bar"><i style="width: 80%"></i></div>
+          </div>
+          <div class="stock">
+            <div class="stock-head"><span>Wheat flour</span><span>65 kg</span></div>
+            <div class="bar"><i style="width: 55%"></i></div>
+          </div>
+          <div class="stock">
+            <div class="stock-head"><span>Cooking oil</span><span>14 L</span></div>
+            <div class="bar low"><i style="width: 18%"></i></div>
+          </div>
+          <div class="stock">
+            <div class="stock-head"><span>Lentils</span><span>40 kg</span></div>
+            <div class="bar"><i style="width: 45%"></i></div>
+          </div>
+          <p class="panel-note">Cooking oil is running low. Reorder soon.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="container">
+        <h2 class="section-title">Everything the mess store needs</h2>
+        <p class="section-sub">Simple tools for the mess staff and administration to keep stock under control.</p>
+        <div class="feature-grid">
+          <article class="feature">
+            <h3>Stock tracking</h3>
+            <p>See every item, its quantity and unit in one place.</p>
+          </article>
+          <article class="feature">
+            <h3>Low stock alerts</h3>
+            <p>Get warned when an item falls below its minimum level.</p>
+          </article>
+          <article class="feature">
+            <h3>Daily usage</h3>
+            <p>Record what the kitchen uses each day and spot waste early.</p>
+          </article>
+          <article class="feature">
+            <h3>Supplier records</h3>
+            <p>Keep supplier details and past purchases together.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works">
+      <div class="container">
+        <h2 class="section-title">How it works</h2>
+        <p class="section-sub">Three steps from delivery to dinner.</p>
+        <ol class="steps">
+          <li>
+            <h3>Add new stock</h3>
+            <p>Enter items and quantities when a delivery arrives.</p>
+          </li>
+          <li>
+            <h3>Record daily usage</h3>
+            <p>Log what was used for each meal at the end of the day.</p>
+          </li>
+          <li>
+            <h3>Reorder on time</h3>
+            <p>Check the low stock list and place orders before items run out.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="cta" id="login">
+      <div class="container">
+        <h2>Ready to manage the mess store?</h2>
+        <a href="#" class="btn">Login to continue</a>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="container footer-inner">
+      <div>
+        <strong>Mess Inventory</strong><br>
+        A project for Fundamentals of Web Development
+      </div>
+      <div>
+        <strong>South Asian University</strong><br>
+        New Delhi, India
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
