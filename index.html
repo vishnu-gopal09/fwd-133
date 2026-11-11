@@ -17,7 +17,7 @@
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="#features">Features</a></li>
         <li><a href="#how-it-works">How it works</a></li>
-        <li><a href="#inventory">Inventory</a></li>
+        <li><a href="#manager">Inventory</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a href="#login" class="login">Login</a></li>
       </ul>
@@ -25,13 +25,13 @@
   </header>
 
   <main>
-    <section class="hero" id="inventory">
+    <section class="hero">
       <div class="container hero-grid">
         <div>
           <h1>Know what is in the mess store before it runs out.</h1>
           <p>Mess Inventory helps South Asian University track groceries, vegetables and supplies, so every meal is planned with the stock you actually have.</p>
           <div class="btn-row">
-            <a href="#login" class="btn btn-primary">Open inventory</a>
+            <a href="#manager" class="btn btn-primary">Open inventory</a>
             <a href="#how-it-works" class="btn btn-outline">See how it works</a>
           </div>
         </div>
@@ -84,6 +84,68 @@
       </div>
     </section>
 
+    <section class="manager" id="manager">
+      <div class="container">
+        <h2 class="section-title">Inventory manager</h2>
+        <p class="section-sub">Add stock, watch low levels and log daily usage. Data is saved in this browser.</p>
+
+        <div class="stats">
+          <div class="stat"><strong id="stat-total">0</strong><span>Items in store</span></div>
+          <div class="stat"><strong id="stat-low">0</strong><span>Low or out of stock</span></div>
+          <div class="stat"><strong id="stat-used">0</strong><span>Usage entries today</span></div>
+        </div>
+
+        <div class="alert" id="alert" role="status" hidden></div>
+
+        <div class="toolbar">
+          <input type="search" id="search" placeholder="Search items" aria-label="Search items">
+          <select id="filter" aria-label="Filter items">
+            <option value="all">All items</option>
+            <option value="low">Low stock only</option>
+          </select>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Item</th><th>Quantity</th><th>Minimum</th><th>Status</th><th><span class="sr-only">Actions</span></th></tr>
+            </thead>
+            <tbody id="inventory-body"></tbody>
+          </table>
+        </div>
+
+        <div class="forms-grid">
+          <form id="add-form" class="card" novalidate>
+            <h3>Add stock</h3>
+            <p class="hint">Entering an existing item name adds to its quantity.</p>
+            <label>Item name <input type="text" id="add-name" required></label>
+            <div class="row">
+              <label>Quantity <input type="number" id="add-qty" min="0" step="any" required></label>
+              <label>Unit
+                <select id="add-unit">
+                  <option>kg</option><option>g</option><option>L</option><option>ml</option><option>pcs</option><option>packs</option>
+                </select>
+              </label>
+              <label>Minimum level <input type="number" id="add-min" min="0" step="any" value="0"></label>
+            </div>
+            <button type="submit" class="btn btn-primary">Add to store</button>
+            <p class="form-msg" id="add-msg" role="status"></p>
+          </form>
+
+          <form id="usage-form" class="card" novalidate>
+            <h3>Log daily usage</h3>
+            <p class="hint">Quantity used is deducted from stock automatically.</p>
+            <label>Item <select id="use-item"></select></label>
+            <label>Quantity used <input type="number" id="use-qty" min="0" step="any" required></label>
+            <button type="submit" class="btn btn-primary">Record usage</button>
+            <p class="form-msg" id="use-msg" role="status"></p>
+            <h4>Today's usage</h4>
+            <ul class="usage-list" id="usage-list"></ul>
+          </form>
+        </div>
+      </div>
+    </section>
+
     <section id="how-it-works">
       <div class="container">
         <h2 class="section-title">How it works</h2>
@@ -126,5 +188,6 @@
     </div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
