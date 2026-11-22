@@ -6,32 +6,33 @@
   <title>Mess Inventory | South Asian University</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="auth.js"></script>
 </head>
 <body>
 
-  <header class="navbar">
+    <header class="navbar">
     <nav class="container nav-inner" aria-label="Main navigation">
       <a href="index.html" class="brand"><span class="brand-mark"></span>Mess Inventory</a>
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#how-it-works">How it works</a></li>
-        <li><a href="#inventory">Inventory</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#login" class="login">Login</a></li>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="inventory.html">Inventory</a></li>
+        <li><a href="suppliers.html">Suppliers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html" id="auth-link" class="login">Login</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section class="hero" id="inventory">
+    <section class="hero">
       <div class="container hero-grid">
         <div>
           <h1>Know what is in the mess store before it runs out.</h1>
           <p>Mess Inventory helps South Asian University track groceries, vegetables and supplies, so every meal is planned with the stock you actually have.</p>
           <div class="btn-row">
-            <a href="#login" class="btn btn-primary">Open inventory</a>
+            <a href="inventory.html" class="btn btn-primary">Open inventory</a>
             <a href="#how-it-works" class="btn btn-outline">See how it works</a>
           </div>
         </div>
@@ -108,7 +109,7 @@
     <section class="cta" id="login">
       <div class="container">
         <h2>Ready to manage the mess store?</h2>
-        <a href="#" class="btn">Login to continue</a>
+        <a href="login.html" class="btn" id="cta-link">Login to continue</a>
       </div>
     </section>
   </main>
@@ -121,10 +122,10 @@
       </div>
       <div>
         <strong>South Asian University</strong><br>
-        New Delhi, India
+        Gaushala Road, New Delhi
       </div>
     </div>
   </footer>
 
-</body>
+  </body>
 </html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Mess Inventory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="auth.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <nav class="container nav-inner" aria-label="Main navigation">
+      <a href="index.html" class="brand"><span class="brand-mark"></span>Mess Inventory</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="inventory.html">Inventory</a></li>
+        <li><a href="suppliers.html">Suppliers</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="login.html" id="auth-link" class="login">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-sub">Questions about the mess store or this project? Send us a message.</p>
+        <div class="forms-grid">
+          <form id="contact-form" class="card" novalidate>
+            <label>Name <input type="text" id="c-name" required></label>
+            <label>Email <input type="email" id="c-email" required></label>
+            <label>Message <textarea id="c-msg" rows="5" required></textarea></label>
+            <button type="submit" class="btn btn-primary">Send message</button>
+            <p class="form-msg" id="c-status" role="status"></p>
+          </form>
+          <div class="card">
+            <h3>Mess office</h3>
+            <p class="hint">South Asian University<br>Gaushala Road<br>New Delhi 110021, India</p>
+            <h4>Office hours</h4>
+            <p class="hint">Monday to Saturday, 9:00 AM to 5:00 PM</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="container footer-inner">
+      <div><strong>Mess Inventory</strong><br>A project for Fundamentals of Web Development</div>
+      <div><strong>South Asian University</strong><br>Gaushala Road, New Delhi</div>
+    </div>
+  </footer>
+
+  <script src="contact.js"></script>
+</body>
+</html>
