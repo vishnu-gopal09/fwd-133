@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" data-protected>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Suppliers | Mess Inventory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="auth.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <nav class="container nav-inner" aria-label="Main navigation">
+      <a href="index.html" class="brand"><span class="brand-mark"></span>Mess Inventory</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="inventory.html">Inventory</a></li>
+        <li><a href="suppliers.html" class="active">Suppliers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html" id="auth-link" class="login">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <h2 class="section-title">Supplier records</h2>
+        <p class="section-sub">Keep supplier contacts and what they provide in one place. Data is saved in this browser.</p>
+        <div class="toolbar"><input type="search" id="sup-search" placeholder="Search suppliers or items" aria-label="Search suppliers"></div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Supplier</th><th>Phone</th><th>Supplies</th><th><span class="sr-only">Actions</span></th></tr></thead>
+            <tbody id="sup-body"></tbody>
+          </table>
+        </div>
+        <form id="sup-form" class="card sup-form" novalidate>
+          <h3>Add supplier</h3>
+          <div class="row">
+            <label>Supplier name <input type="text" id="sup-name" required></label>
+            <label>Phone (10 digits) <input type="tel" id="sup-phone" inputmode="numeric" required></label>
+            <label>Supplies <input type="text" id="sup-items" placeholder="e.g. Rice, flour" required></label>
+          </div>
+          <button type="submit" class="btn btn-primary">Save supplier</button>
+          <p class="form-msg" id="sup-msg" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="container footer-inner">
+      <div><strong>Mess Inventory</strong><br>A project for Fundamentals of Web Development</div>
+      <div><strong>South Asian University</strong><br>Gaushala Road, New Delhi</div>
+    </div>
+  </footer>
+
+  <script src="suppliers.js"></script>
+</body>
+</html>
